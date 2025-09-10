@@ -12,7 +12,7 @@ By completing this exercise, you will:
 - Create pull requests
 - Handle merge conflicts
 - Use proper commit message conventions
-
+- Basic calculator with addition, subtraction, and multiplication
 ## Repository Structure
 
 ```
