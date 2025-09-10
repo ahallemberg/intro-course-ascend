@@ -3,6 +3,9 @@
 
 Welcome to the hands-on Git and GitHub exercise! This repository is designed to help you practice essential Git commands and GitHub workflows.
 
+
+lol
+
 ## Learning Objectives
 
 By completing this exercise, you will:
