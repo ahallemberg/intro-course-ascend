@@ -19,7 +19,7 @@ By completing this exercise, you will:
 intro-course-ascend/
 ├── README.md                 # This file
 ├── src/
-│   ├── calculator.py        # Main calculator functions
+│   ├── calculator.py        # Main calculator functions with stuff like additioning, subbing and multing
 │   └── utils.py             # Utility functions
 ├── docs/
 │   └── getting-started.md   # Additional documentation
