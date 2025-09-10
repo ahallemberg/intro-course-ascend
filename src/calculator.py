@@ -47,6 +47,25 @@ def subtract(a, b):
 # TODO: Add multiplication function
 
 # TODO: Add division function
+def divide(a, b):
+    """
+    Divide first number by second number.
+    
+    Args:
+        a (float): Dividend
+        b (float): Divisor
+        
+    Returns:
+        float: Quotient of a divided by b
+        
+    Raises:
+        TypeError: If inputs are not numbers
+        ValueError: If divisor is zero
+    """
+    validate_numbers(a, b)
+
+    result = a / b
+    return format_result(result)
 
 
 def main():
@@ -58,13 +77,13 @@ def main():
     print("Type 'quit' to exit")
     
     while True:
-        operation = input("\nEnter operation (add/subtract/quit): ").lower().strip()
+        operation = input("\nEnter operation (add/subtract/dividequit): ").lower().strip()
         
         if operation == 'quit':
             print("Goodbye!")
             break
             
-        if operation not in ['add', 'subtract']:
+        if operation not in ['add', 'subtract',"divide"]:
             print("Invalid operation. Please use 'add' or 'subtract'")
             continue
             
@@ -78,6 +97,9 @@ def main():
             elif operation == 'subtract':
                 result = subtract(a, b)
                 print(f"Result: {a} - {b} = {result}")
+            elif operation == 'divide':
+                result = subtract(a, b)
+                print(f"Result: {a}/{b} = {result}")
                 
         except ValueError:
             print("Please enter valid numbers")
