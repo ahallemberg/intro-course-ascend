@@ -45,7 +45,23 @@ def subtract(a, b):
 
 
 # TODO: Add multiplication function
+def multiplication(a, b):
+    """
+    Multiply two numbers together.
 
+    Args:
+        a (float): First number
+        b (float): Second number
+
+    Returns:
+        float: Product of a and b
+
+    Raises:
+        TypeError: If inputs are not numbers
+    """
+    validate_numbers(a, b)
+    result = a * b
+    return format_result(result)
 # TODO: Add division function
 
 
@@ -58,16 +74,15 @@ def main():
     print("Type 'quit' to exit")
     
     while True:
-        operation = input("\nEnter operation (add/subtract/quit): ").lower().strip()
+        operation = input("\nEnter operation (add/subtract/multiply/quit): ").lower().strip()
         
         if operation == 'quit':
             print("Goodbye!")
             break
             
-        if operation not in ['add', 'subtract']:
-            print("Invalid operation. Please use 'add' or 'subtract'")
+        if operation not in ['add', 'subtract', 'multiply']:
+            print("Invalid operation. Please use 'add', 'subtract' or 'multiply'")
             continue
-            
         try:
             a = float(input("Enter first number: "))
             b = float(input("Enter second number: "))
@@ -78,7 +93,9 @@ def main():
             elif operation == 'subtract':
                 result = subtract(a, b)
                 print(f"Result: {a} - {b} = {result}")
-                
+            elif operation == 'multiply':
+                result = multiplication(a, b)
+                print(f"Result: {a} + {b} = {result}")
         except ValueError:
             print("Please enter valid numbers")
         except TypeError as e:
