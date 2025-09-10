@@ -46,6 +46,24 @@ def subtract(a, b):
 
 # TODO: Add multiplication function
 
+def multiply(a, b):
+    """
+    Multiply two numbers together.
+    
+    Args:
+        a (float): First number
+        b (float): Second number
+        
+    Returns:
+        float: Product of a and b
+        
+    Raises:
+        TypeError: If inputs are not numbers
+    """
+    validate_numbers(a, b)
+    result = a * b
+    return format_result(result)
+
 # TODO: Add division function
 
 
@@ -54,7 +72,7 @@ def main():
     Simple interactive calculator for testing.
     """
     print("Simple Calculator")
-    print("Available operations: add, subtract")
+    print("Available operations: add, subtract, multiply")
     print("Type 'quit' to exit")
     
     while True:
@@ -64,9 +82,8 @@ def main():
             print("Goodbye!")
             break
             
-        if operation not in ['add', 'subtract']:
-            print("Invalid operation. Please use 'add' or 'subtract'")
-            continue
+        if operation not in ['add', 'subtract', 'multiply']:
+            print("Invalid operation. Please use 'add', 'subtract', or 'multiply'")
             
         try:
             a = float(input("Enter first number: "))
@@ -78,6 +95,9 @@ def main():
             elif operation == 'subtract':
                 result = subtract(a, b)
                 print(f"Result: {a} - {b} = {result}")
+            elif operation == 'multiply':
+                result = multiply(a, b)
+                print(f"Result: {a} * {b} = {result}")
                 
         except ValueError:
             print("Please enter valid numbers")
