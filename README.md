@@ -36,3 +36,6 @@ intro-course-ascend/
 
 ## Current Features
 - Basic calculator with addition, subtraction, and multiplication
+
+## Random shit
+- Random shit
